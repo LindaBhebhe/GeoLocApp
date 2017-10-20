@@ -16,6 +16,7 @@ function onDeviceReady() {
 function onSuccess(position) {
 
     var element = document.getElementById('geolocation');
+    //**Used in the previous version
     //element.innerHTML = 'Latitude: ' + position.coords.latitude  + '<br />' +
        // 'Longitude: '          + position.coords.longitude             + '<br />' +
        // 'Altitude: '           + position.coords.altitude              + '<br />' +
@@ -24,12 +25,13 @@ function onSuccess(position) {
        // 'Heading: '            + position.coords.heading               + '<br />' +
         //'Speed: '              + position.coords.speed                 + '<br />' +
        // 'Timestamp: '          + position.timestamp          + '<br />';
-
+    
+    //display the map instead
       element.innerHTML = "<iframe src =\"https:\/\/maps.google.com/maps?q="+position.coords.latitude+","+position.coords.longitude+"&hl=es;z=14&amp;output=embed\" frameborder=\"0\" style=\"height:100%; width:100%\"><\/iframe>";
 }
 
 // onError Callback receives a PositionError object
-//
+
 function onError(error) {
     alert('code: '    + error.code    + '\n' +
         'message: ' + error.message + '\n');

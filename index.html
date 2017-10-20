@@ -23,6 +23,7 @@
   </script>
   
   <script src="js/lib/jquery.js"></script>
+
   <!-- your scripts here -->
   <script src="js/app/app.js"></script>
   <script src="js/app/bootstrap.js"></script>
@@ -32,20 +33,24 @@
   <body style="height: 100%">
     
     <div data-role="page" style="height: 100%">
-
+      
+      <!-- /header -->
       <div data-role="header">
         <h2 style=" text-align: center; color:#4171f4;"> GeoLoc </h2>
       
-      </div><!-- /header -->
+      </div><
 
-      <div style ="text-align: center;">
+      <div>
       <p> To display your current location on the map click the button below</p>
       <button style ="text-align: center" type="button" onclick="onDeviceReady()"> Display location </button>
       </div>
+     
 
+     <!-- displaying the map -->
       <div data-role="content" style="height: 100%">
             <p id="geolocation">
               
+              <!-- displaying the default map before the bustton is clicked -->
                  <iframe src = "https://maps.google.com/maps?q=3.1273,&hl=es;z=14&amp;output=embed" frameborder="0" style="height:100%; width:100%"></iframe> 
             </p>
       </div><!-- /content -->
